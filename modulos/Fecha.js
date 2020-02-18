@@ -1,4 +1,4 @@
-class Fecha {
+export default class Fecha {
     /**
      * 
      * @param {String} dia Dia del mes
