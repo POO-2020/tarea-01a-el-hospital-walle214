@@ -24,7 +24,7 @@ export default class Fecha {
     getDias() {
         return Math.trunc(this.getMsecTrascurridos() / 8.64e+7);
     }
-    getFech() {
+    getFecha() {
         const meses = ['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Agto', 'Sept', 'Oct', 'Nov', 'Dic'];
         return `${this.fecha.getDay()}/${meses[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`;
     }
