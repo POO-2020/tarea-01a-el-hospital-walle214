@@ -20,16 +20,16 @@ export default class Hospital {
         this.doctores.push(doctor);
     }
     listarDoctores() {
-        this.doctores.forEach(d => console.log(d.getPerfil(), '\n'));
+        this.doctores.forEach(d => console.log(d.getPerfil(),'\n'));
     }
     /**
      * 
      * @param {Cita} cita 
      */
-    registrarCita(cita) {
+    registrarCita(cita){
         this.citas.push(cita);
     }
-    listarCitas() {
-        this.citas.forEach(c => console.log(c.getCita(), '\n'));
+    listarCitas(){
+        this.citas.forEach(c=>console.log(c.getCita(),'\n'));
     }
 }
