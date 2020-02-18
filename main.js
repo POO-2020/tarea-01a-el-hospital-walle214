@@ -2,19 +2,20 @@ import Fecha from "./modulos/Fecha.js";
 import Tiempo from "./modulos/Tiempo.js";
 import Nombre from "./modulos/Nombre.js";
 import Doctor from "./modulos/Doctor.js";
+import Paciente from "./modulos/Paciente.js";
 
-const ulises = new Nombre('Ulises', 'Ramirez', 'Martinez');
+const ulisesNombre = new Nombre('Ulises', 'Ramirez', 'Martinez');
+const ulisesFechaNacimiento = new Fecha(24, 9, 2000);
 
 const probarFecha = _ => {
-    const ulises = new Fecha(24, 9, 2000);
 
     console.log(
-        ulises.getAnnios(),
-        ulises.getDiaFecha(),
-        ulises.getDias(),
-        ulises.getFecha(),
-        ulises.getMeses(),
-        ulises.getSemanas()
+        ulisesFechaNacimiento.getAnnios(),
+        ulisesFechaNacimiento.getDiaFecha(),
+        ulisesFechaNacimiento.getDias(),
+        ulisesFechaNacimiento.getFecha(),
+        ulisesFechaNacimiento.getMeses(),
+        ulisesFechaNacimiento.getSemanas()
     );
 }
 const probarTiempo = _ => {
@@ -26,12 +27,16 @@ const probarTiempo = _ => {
 }
 const probarNombre = _ => {
     console.log(
-        ulises.getApellidoNombre(),
-        ulises.getIniciales(),
-        ulises.getNombreCompleto()
+        ulisesNombre.getApellidoNombre(),
+        ulisesNombre.getIniciales(),
+        ulisesNombre.getNombreCompleto()
     );
 }
 const probarDoctor = _ => {
-    const doctor = new Doctor(ulises, 'Cirujano', 31233998831, 'dsfbsdgb');
+    const doctor = new Doctor(ulisesNombre, 'Cirujano', 31233998831, 'dsfbsdgb');
     console.log(doctor.getPerfil());
+}
+const probarPaciente = _ => {
+    const paciente = new Paciente(ulisesNombre,ulisesFechaNacimiento,3123398831);
+    console.log(paciente.getPerfil());
 }
