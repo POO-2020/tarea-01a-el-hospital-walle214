@@ -10,10 +10,6 @@ export default class Tiempo {
         this.minutos = minutos;
         this.periodo = periodo.toUpperCase();
     }
-    getFormato12() {
-        return `${this.hora}:${this.minutos} ${this.periodo}`;
-    }
-    getFormato24() {
-        return `${this.hora += this.periodo==='AM' ? 0 : 12}:${this.minutos}`;
-    }
+    getFormato12 = _ => `${this.hora}:${this.minutos} ${this.periodo}`;
+    getFormato24 = _ => `${this.hora += this.periodo === 'AM' ? 0 : 12}:${this.minutos}`;
 }
