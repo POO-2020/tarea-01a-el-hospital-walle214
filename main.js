@@ -4,13 +4,15 @@ import Nombre from "./modulos/Nombre.js";
 import Doctor from "./modulos/Doctor.js";
 import Paciente from "./modulos/Paciente.js";
 import Cita from "./modulos/Cita.js";
+import Hospital from "./modulos/Hospital.js";
 
 const ulisesNombre = new Nombre('Ulises', 'Ramirez', 'Martinez');
 const ulisesFechaNacimiento = new Fecha(24, 9, 2000);
 const medioDia = new Tiempo(9, 0, 'am');
 const doctor = new Doctor(ulisesNombre, 'Cirujano', 31233998831, 'dsfbsdgb');
 const paciente = new Paciente(ulisesNombre, ulisesFechaNacimiento, 3123398831);
-const cita = new Cita(ulisesFechaNacimiento,medioDia,doctor,paciente);
+const cita = new Cita(ulisesFechaNacimiento, medioDia, doctor, paciente);
+const hospitalRegional = new Hospital('Hospital Regional', 'Some street');
 
 const probarFecha = _ => {
     console.log(
@@ -43,4 +45,8 @@ const probarPaciente = _ => {
 }
 const probarCita = _ => {
     console.log(cita.getCita());
+}
+const probarHospital = _ => {
+    hospitalRegional.registrarDoctor(doctor);
+    hospitalRegional.listarDoctores();
 }
