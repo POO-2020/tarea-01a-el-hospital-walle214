@@ -49,4 +49,6 @@ const probarCita = _ => {
 const probarHospital = _ => {
     hospitalRegional.registrarDoctor(doctor);
     hospitalRegional.listarDoctores();
+    hospitalRegional.registrarCita(cita);
+    hospitalRegional.listarCitas();
 }

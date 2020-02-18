@@ -1,4 +1,5 @@
 import Doctor from "./Doctor.js";
+import Cita from "./Cita.js";
 
 export default class Hospital {
     /**
@@ -16,9 +17,19 @@ export default class Hospital {
      * @param {Doctor} doctor 
      */
     registrarDoctor(doctor) {
-        return this.doctores.push(doctor);
+        this.doctores.push(doctor);
     }
     listarDoctores() {
-        this.doctores.map(d => console.log(d.getPerfil(),'\n'));
+        this.doctores.forEach(d => console.log(d.getPerfil(), '\n'));
+    }
+    /**
+     * 
+     * @param {Cita} cita 
+     */
+    registrarCita(cita) {
+        this.citas.push(cita);
+    }
+    listarCitas() {
+        this.citas.forEach(c => console.log(c.getCita(), '\n'));
     }
 }
