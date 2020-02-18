@@ -8,9 +8,6 @@ class Fecha {
     constructor(dia, mes, annio) {
         this.fecha = new Date(annio, mes, dia);
     }
-    /**
-     * Regresa el número de años desde esta fecha hasta el día de hoy.
-     */
     getMsecTrascurridos() {
         const msecNow = Date.now.getMilliseconds();
         return this.fecha.getMilliseconds() - msecNow;
@@ -18,9 +15,6 @@ class Fecha {
     getAnnios() {
         return Math.trunc(this.getMsecTrascurridos() / 31, 556, 900, 000);
     }
-    /**
-     * Regresa el número de meses que hay desde esta fecha hasta el día de hoy.
-     */
     getMeses() {
         return Math.trunc(this.getMsecTrascurridos() / 2.628e+9);
     }
