@@ -1,6 +1,9 @@
 import Fecha from "./modulos/Fecha.js";
 import Tiempo from "./modulos/Tiempo.js";
 import Nombre from "./modulos/Nombre.js";
+import Doctor from "./modulos/Doctor.js";
+
+const ulises = new Nombre('Ulises', 'Ramirez', 'Martinez');
 
 const probarFecha = _ => {
     const ulises = new Fecha(24, 9, 2000);
@@ -22,10 +25,13 @@ const probarTiempo = _ => {
     );
 }
 const probarNombre = _ => {
-    const ulises = new Nombre('Ulises', 'Ramirez', 'Martinez');
     console.log(
         ulises.getApellidoNombre(),
         ulises.getIniciales(),
         ulises.getNombreCompleto()
     );
+}
+const probarDoctor = _ => {
+    const doctor = new Doctor(ulises, 'Cirujano', 31233998831, 'dsfbsdgb');
+    console.log(doctor.getPerfil());
 }
